@@ -13,11 +13,13 @@
   <body>
     <div class="container">
       <?php
+      $friends = ["Matteo", "Angela", "Victor", "Jarosław", "Beata"];
       $num = -10;
       $numAbs = abs($num);
       echo $numAbs ."<br>";
       echo "10^3 == " . pow($numAbs, 3) ."<br>";
       echo sqrt(144) ."<br>";
+      echo $friends[2] ."<br>";
       echo "<br>";
 
       $world = "Monde!";

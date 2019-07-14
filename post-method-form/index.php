@@ -14,7 +14,7 @@
     <div class="container pt-5">
       <div class="row">
         <div class="offset-md-3 col-md-6">
-          <form action="index.php" method="get">
+          <form action="./index.php" method="post">
             <div class="form-group">
               <label for="name">Name:</label>
               <input
@@ -37,8 +37,8 @@
           </form>
           <div class="mt-4">
             <?php
-              echo "name: " .$_GET["name"] . "<br>";
-              echo "age: " .$_GET["age"] . "<br>";
+              echo "name: " .$_POST["name"] . "<br>";
+              echo "age: " .$_POST["age"] . "<br>";
             ?>
           </div>
         </div>
