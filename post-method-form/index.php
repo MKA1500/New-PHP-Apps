@@ -31,6 +31,41 @@
                 id="age"
                 name="age" />
             </div>
+            <div class="form-group">
+              <label for="languages[]">Languages:</label>
+              <div class="row">
+                <div class="col-sm-4">
+                  <label>
+                    <input type="checkbox" name="languages[]" value="Deutsch"> Deutsch
+                  </label>
+                </div>
+                <div class="col-sm-4">
+                  <label>
+                    <input type="checkbox" name="languages[]" value="English"> English
+                  </label>
+                </div>
+                <div class="col-sm-4">
+                  <label>
+                    <input type="checkbox" name="languages[]" value="Italiano"> Italiano
+                  </label>
+                </div>
+                <div class="col-sm-4">
+                  <label>
+                    <input type="checkbox" name="languages[]" value="Lietuvos"> Lietuvos
+                  </label>
+                </div>
+                <div class="col-sm-4">
+                  <label>
+                    <input type="checkbox" name="languages[]" value="Polski"> Polski
+                  </label>
+                </div>
+                <div class="col-sm-4">
+                  <label>
+                    <input type="checkbox" name="languages[]" value="Svenska"> Svenska
+                  </label>
+                </div>
+              </div>
+            </div>
             <button
               class="btn btn-warning"
               type="submit">Submit</button>
@@ -39,6 +74,17 @@
             <?php
               echo "name: " .$_POST["name"] . "<br>";
               echo "age: " .$_POST["age"] . "<br>";
+              $languages = $_POST["languages"];
+              $langNum = count($languages);
+              echo "languages: ";
+              if ($langNum > 0):
+                echo $langNum ."<br>";
+              else:
+                echo "<br>";
+              endif;
+              foreach ($languages as &$value) {
+                  echo "- " . $value . "<br>";
+              }
             ?>
           </div>
         </div>
