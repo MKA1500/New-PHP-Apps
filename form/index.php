@@ -12,24 +12,17 @@
   </head>
   <body>
     <div class="container pt-5">
+      <h2 class="text-center mb-3">Check your grade:</h2>
       <div class="row">
         <div class="offset-md-3 col-md-6">
           <form action="index.php" method="get">
             <div class="form-group">
-              <label for="name">Name:</label>
+              <label for="name">Your Name:</label>
               <input
                 type="text"
                 class="form-control mb-4"
                 id="name"
                 name="name" />
-            </div>
-            <div class="form-group">
-              <label for="age">Age:</label>
-              <input
-                type="number"
-                class="form-control mb-4"
-                id="age"
-                name="age" />
             </div>
             <button
               class="btn btn-warning"
@@ -37,8 +30,21 @@
           </form>
           <div class="mt-4">
             <?php
-              echo "name: " .$_GET["name"] . "<br>";
-              echo "age: " .$_GET["age"] . "<br>";
+              $yourName = $_GET["name"];
+              $grades = array(
+                "Boris" => "3",
+                "Maciej" => "4+",
+                "Nikolai" => "4",
+                "Agatha" => "5",
+                "Vladimir" => "5+",
+                "Angela" => "5",
+                "Jarosław" => "2",
+                "Victor" => "4",
+                "Jane" => "3+",
+                "Asia" => "4-"
+              );
+              echo $yourName . ",<br>";
+              echo "your grade is: " . $grades[$yourName];
             ?>
           </div>
         </div>
