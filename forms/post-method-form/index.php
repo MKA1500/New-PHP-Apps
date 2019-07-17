@@ -69,6 +69,7 @@
             <button
               class="btn btn-warning"
               type="submit">Submit</button>
+            <a class="btn btn-danger" href="../">Back</a>
           </form>
           <div class="mt-4">
             <?php
